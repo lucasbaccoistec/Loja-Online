@@ -1,0 +1,10 @@
+<a href="{% url 'lista_artigos' %}">Voltar</a>
+<h1>Vendedor: {{ vendedor.nome }}</h1>
+<p>{{ vendedor.descricao }}</p>
+<hr>
+<h2>Artigos à venda:</h2>
+<ul>
+{% for artigo in vendedor.artigos.all %}
+    <li>{{ artigo.nome }} - {{ artigo.preco }}€</li>
+{% endfor %}
+</ul>

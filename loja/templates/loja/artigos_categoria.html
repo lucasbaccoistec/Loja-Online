@@ -1,0 +1,7 @@
+<a href="{% url 'lista_artigos' %}">Voltar</a>
+<h1>Categoria: {{ categoria.nome }}</h1>
+<p>{{ categoria.descricao }}</p>
+<hr>
+{% for artigo in artigos %}
+    <h3>{{ artigo.nome }} - {{ artigo.preco }}€</h3>
+{% endfor %}

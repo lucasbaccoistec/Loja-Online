@@ -1,0 +1,9 @@
+<h1>Todos os Artigos</h1>
+<hr>
+{% for artigo in artigos %}
+    <h3>{{ artigo.nome }} - {{ artigo.preco }}€</h3>
+    <p>{{ artigo.descricao }}</p>
+    <p>Categoria: <a href="{% url 'artigos_categoria' artigo.categoria.id %}">{{ artigo.categoria.nome }}</a></p>
+    <p>Vendedor: <a href="{% url 'perfil_vendedor' artigo.vendedor.id %}">{{ artigo.vendedor.nome }}</a></p>
+    <hr>
+{% endfor %}
